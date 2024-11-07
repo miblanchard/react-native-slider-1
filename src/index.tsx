@@ -509,7 +509,7 @@ export class Slider extends PureComponent<SliderProps, SliderState> {
             );
             size.height = Math.max(
                 0,
-                thumbTouchSize?.height || 0 - containerSize.height,
+                (thumbTouchSize?.height || 0) - containerSize.height,
             );
         }
 
