@@ -505,11 +505,11 @@ export class Slider extends PureComponent<SliderProps, SliderState> {
         if (allMeasured) {
             size.width = Math.max(
                 0,
-                thumbTouchSize?.width || 0 + thumbSize.width,
+                (thumbTouchSize?.width || 0) - thumbSize.width,
             );
             size.height = Math.max(
                 0,
-                thumbTouchSize?.height || 0 - containerSize.height,
+                (thumbTouchSize?.height || 0) - containerSize.height,
             );
         }
 
