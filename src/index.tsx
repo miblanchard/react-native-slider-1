@@ -285,7 +285,7 @@ export class Slider extends PureComponent<SliderProps, SliderState> {
             ? nativeEvent.locationX - thumbSize.width
             : this._getThumbLeft(this._getCurrentValue(this._activeThumbIndex));
 
-        if (this.props.thumbTouchSize) {
+        if (this.props.thumbTouchSize && this.props.trackClickable) {
             this._previousLeft -=
                 (this.props.thumbTouchSize.width - thumbSize.width) / 2;
         }
