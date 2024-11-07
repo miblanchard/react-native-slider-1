@@ -392,16 +392,11 @@ export class Slider extends PureComponent<SliderProps, SliderState> {
     };
     _getThumbLeft = (value: number) => {
         const {containerSize, thumbSize} = this.state;
-        const {vertical} = this.props;
 
         const standardRatio = this._getRatio(value);
 
         const ratio = I18nManager.isRTL ? 1 - standardRatio : standardRatio;
-        return (
-            ratio *
-            ((vertical ? containerSize.height : containerSize.width) -
-                thumbSize.width)
-        );
+        return ratio * (containerSize.width - thumbSize.width);
     };
     _getValue = (gestureState: {dx: number; dy: number}) => {
         const {containerSize, thumbSize, values} = this.state;
