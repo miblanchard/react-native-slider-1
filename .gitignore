@@ -4,6 +4,7 @@
 
 # DEV
 .vscode
+.idea
 
 # node.js
 #
