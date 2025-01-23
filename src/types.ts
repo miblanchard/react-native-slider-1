@@ -1,5 +1,10 @@
 import * as React from 'react';
-import {Animated, ImageSourcePropType, ViewStyle} from 'react-native';
+import {
+    Animated,
+    ImageSourcePropType,
+    StyleProp,
+    ViewStyle,
+} from 'react-native';
 
 export type Dimensions = {
     height: number;
@@ -21,14 +26,14 @@ export type SliderProps = {
         timing?: Animated.AnimatedProps<ViewStyle>;
     };
     animationType: 'spring' | 'timing';
-    containerStyle?: ViewStyle;
+    containerStyle?: StyleProp<ViewStyle>;
     debugTouchArea?: boolean;
     disabled?: boolean;
     maximumTrackTintColor?: string;
-    maximumTrackStyle?: ViewStyle;
+    maximumTrackStyle?: StyleProp<ViewStyle>;
     maximumValue: number;
     minimumTrackTintColor?: string;
-    minimumTrackStyle?: ViewStyle;
+    minimumTrackStyle?: StyleProp<ViewStyle>;
     minimumValue: number;
     onSlidingComplete?: SliderOnChangeCallback;
     onSlidingStart?: SliderOnChangeCallback;
@@ -50,13 +55,13 @@ export type SliderProps = {
     step?: number;
     testID?: ViewStyle['testID'];
     thumbImage?: ImageSourcePropType;
-    thumbStyle?: ViewStyle;
+    thumbStyle?: StyleProp<ViewStyle>;
     thumbTintColor?: string;
     thumbTouchSize?: Dimensions;
     trackClickable?: boolean;
     trackMarks?: Array<number>;
     trackRightPadding?: number;
-    trackStyle?: ViewStyle;
+    trackStyle?: StyleProp<ViewStyle>;
     value?: Animated.Value | number | Array<number>;
     /**
      * Allows the start from the zero value. The minimum value track can be rendered in two directions from zero.

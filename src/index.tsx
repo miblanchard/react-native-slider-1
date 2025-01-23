@@ -8,6 +8,7 @@ import {
     LayoutChangeEvent,
     PanResponder,
     PanResponderInstance,
+    StyleSheet,
     View,
     ViewStyle,
 } from 'react-native';
@@ -865,7 +866,7 @@ export class Slider extends PureComponent<SliderProps, SliderState> {
                                     ? {}
                                     : {
                                           backgroundColor: thumbTintColor,
-                                          ...thumbStyle,
+                                          ...StyleSheet.flatten(thumbStyle),
                                       },
                                 {
                                     transform: [
